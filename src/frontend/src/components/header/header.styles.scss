@@ -1,0 +1,32 @@
+.header {
+    height: 64px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+
+    .logo-container {
+        height: 100%;
+
+        .logo {
+            height: 100%;
+            margin: auto 0;
+        }
+    }
+
+    .options {
+        width: 80%;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-around;
+        border-bottom: 1px solid gray;
+
+        .option {
+            padding: 10px 15px;
+            color: black;
+            font-size: 18pt;
+            text-decoration: none;
+            text-transform: capitalize;
+        }
+    }
+}
