@@ -16,6 +16,7 @@ const Header = () => (
             <Link className="option" to="/characters">Персонажи</Link>
             <Link className="option" to="/bestiary">Бестиарий</Link>
             <Link className="option" to="/artifacts">Артефакты</Link>
+            <Link className="option" to="/panteon">Пантеон</Link>
             <Link className="option" to="/world">Мир</Link>
         </div>
     </div>
