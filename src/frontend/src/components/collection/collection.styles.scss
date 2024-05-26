@@ -1,0 +1,14 @@
+.collection {
+    height: 80vh;
+    display: grid;
+    grid-template-columns: 1fr;
+    flex-grow: 1;
+
+
+    .legends-container {
+        display: flex;
+        flex-direction: column;
+
+        padding: 25px 15px;
+    }
+}

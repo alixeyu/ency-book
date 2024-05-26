@@ -1,0 +1,31 @@
+.legend {
+    max-width: 30%;
+    margin: 0 8px;
+    padding: 0 8px;
+
+    .title {
+        font-family: "Amatic SC", sans-serif;
+        text-align: center;
+
+        & > h2 {
+            font-size: 32pt;
+            margin: 16px 0;
+            text-transform: uppercase;
+        }
+
+        .line {
+            border-bottom: 1px solid black;
+            line-height: 0.1em;
+        }
+
+        .timeline {
+            font-size: 12pt;
+            background-color: white;
+            padding: 0 10px;
+        }
+    }
+
+    .description {
+        text-align: justify;
+    }
+}
