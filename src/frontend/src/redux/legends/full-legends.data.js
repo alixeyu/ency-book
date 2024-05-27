@@ -76,7 +76,7 @@ export const FULL_LEGENDS_DATA = {
                     id: 8,
                     name: "Тео",
                     race: "Человек",
-                    class: "-",
+                    class: "Жрец",
                     sub_class: "-",
                     image: "/images/portrait-teo.png"
                 },

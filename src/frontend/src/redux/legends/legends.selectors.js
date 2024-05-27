@@ -4,7 +4,7 @@ const selectLegends = state => state.legends;
 
 export const selectCollection = createSelector(
     [selectLegends],
-    legends => legends.collection
+    legends => legends.collections
 );
 
 export const selectCollectionForPreview = createSelector(
