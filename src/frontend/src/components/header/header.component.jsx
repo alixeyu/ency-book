@@ -13,6 +13,7 @@ const Header = () => (
             </Link>
         </div>
         <div className="options">
+            <Link className="option" to="/legends">Легенды</Link>
             <Link className="option" to="/characters">Персонажи</Link>
             <Link className="option" to="/bestiary">Бестиарий</Link>
             <Link className="option" to="/artifacts">Артефакты</Link>
