@@ -5,11 +5,9 @@ import "./character-icon.styles.scss";
 const CharacterIcon = ({ name, imageURL }) => (
     <div className="character-icon">
         <div className="image-container">
-            <img src={ imageURL } alt={ name + "-image" } />
+            <img src={ imageURL } alt="character-image" />
         </div>
-        <div className="character-info">
-            <h2 className="character-name">{ name }</h2>
-        </div>
+        <h2 className="character-name">{ name }</h2>
     </div>
 );
 
