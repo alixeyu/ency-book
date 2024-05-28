@@ -9,9 +9,10 @@ export const selectCharactersCollections = createSelector(
 
 export const selectCharactersList = createSelector(
     [selectCharactersCollections],
-    collections => {
-        console.log(collections);
-        let data = Object.keys(collections).map(key => collections[key]);
-        return data;
-    }
+    collections => Object.keys(collections).map(key => collections[key])
+);
+
+export const selectCharacter = characterUid => createSelector(
+    [selectCharactersList],
+    characters => characters.find(character => character.uid === characterUid)
 );

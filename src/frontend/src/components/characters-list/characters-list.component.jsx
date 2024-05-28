@@ -1,4 +1,5 @@
 import React from "react";
+import { Routes, Route } from "react-router-dom";
 import { connect } from "react-redux";
 import { createStructuredSelector } from "reselect";
 
@@ -12,8 +13,8 @@ import "./characters-list.styles.scss";
 const CharactersList = ({ characters }) => (
     <div className="characters-list">
         {
-            characters.map(({ id, ...otherProps }) => (
-                <CharacterIcon key={ id } {...otherProps} />
+            characters.map(({ charId, ...otherProps }) => (
+                <CharacterIcon key={ charId } {...otherProps} />
             ))
         }
     </div>

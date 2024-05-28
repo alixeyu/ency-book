@@ -1,9 +1,11 @@
 import React from "react";
 
+import "./homepage.styles.scss";
+
 
 const Homepage = () => (
     <div className="homepage">
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore, nobis.</p>
+        <p>Земли былых легенд - это множество историй, каждая из которых связала судьбы героев в одно приключение.</p>
     </div>
 );
 

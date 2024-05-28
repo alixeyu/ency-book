@@ -1,0 +1,29 @@
+.character-card {
+    .character-image > img {
+        height: 360px;
+        width: 240px;
+    }
+
+    .base-info {
+        margin: 5px;
+    }
+
+    .container {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+
+        .character-story {
+            max-height: 100vh;
+            width: 70%;
+
+            display: grid;
+            grid-template-columns: 1fr;
+
+            text-align: justify;
+            padding: 5px 15px;
+
+            overflow-y: scroll;
+        }
+    }
+}
