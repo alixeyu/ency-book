@@ -1,27 +1,35 @@
-import React from "react";
-import { Routes, Route } from "react-router-dom";
-import { connect } from "react-redux";
-import { createStructuredSelector } from "reselect";
+import React, { useEffect } from "react";
+import { connect, useSelector } from "react-redux";
+import { fetchCollectionStartAsync } from "../../redux/characters/characters.actions";
 
 import CharacterIcon from "../character-icon/character-icon.component";
 
-import { selectCharactersList } from "../../redux/characters/characters.selectors";
+import { selectCharactersCollection } from "../../redux/characters/characters.selectors";
 
 import "./characters-list.styles.scss";
 
 
-const CharactersList = ({ characters }) => (
-    <div className="characters-list">
-        {
-            characters.map(({ charId, ...otherProps }) => (
-                <CharacterIcon key={ charId } {...otherProps} />
-            ))
-        }
-    </div>
-);
+const CharactersList = ({ fetchCharacters }) => {
+    useEffect(() => {
+        fetchCharacters(),
+        [fetchCharacters]
+    });
 
-const mapStateToProps = createStructuredSelector({
-    characters: selectCharactersList
-})
+    const { characters } = useSelector(selectCharactersCollection());
 
-export default connect(mapStateToProps)(CharactersList);
+    return (
+        <div className="characters-list">
+            {
+                characters.map(({ charId, ...otherProps }) => (
+                    <CharacterIcon key={ charId } {...otherProps} />
+                ))
+            }
+        </div>
+    );
+};
+
+const mapDispatchToProps = {
+    fetchCharacters: fetchCollectionStartAsync
+}
+
+export default connect(null, mapDispatchToProps)(CharactersList);

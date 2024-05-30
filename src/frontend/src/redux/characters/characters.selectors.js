@@ -12,6 +12,11 @@ export const selectCharactersList = createSelector(
     collections => Object.keys(collections).map(key => collections[key])
 );
 
+export const selectCharactersCollection = createSelector(
+    [selectCharacters],
+    characters => characters
+)
+
 export const selectCharacter = characterUid => createSelector(
     [selectCharactersList],
     characters => characters.find(character => character.uid === characterUid)
