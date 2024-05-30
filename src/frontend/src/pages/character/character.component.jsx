@@ -16,9 +16,8 @@ const CharacterPage = () => {
     return (
         <div className="character-page">
             <div className="controls">
-                <div className="back-button">
-                    <div onClick={ () => navigate("/characters") }>Back</div>
-                </div>
+                <div>Arts</div>
+                <div onClick={ () => navigate("/characters") }>Back</div>
             </div>
             <div className="content">
                 <CharacterCard character={ character } />
