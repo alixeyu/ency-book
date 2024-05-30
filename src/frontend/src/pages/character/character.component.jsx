@@ -17,7 +17,7 @@ const CharacterPage = () => {
         <div className="character-page">
             <div className="controls">
                 <div>Arts</div>
-                <div onClick={ () => navigate("/characters") }>Back</div>
+                <div onClick={ () => navigate(-1) }>Back</div>
             </div>
             <div className="content">
                 <CharacterCard character={ character } />
