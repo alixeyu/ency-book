@@ -18,16 +18,12 @@ export const fetchCollectionFailure = errorMessage => ({
 
 export const fetchCollectionStartAsync = () => {
     return dispatch => {
+        dispatch(fetchCollectionStart());
 
-        async () => {
-            try {
-                dispatch(fetchCollectionStart());
+        let api_url = process.env.REACT_APP_API_URL + "/legends/";
 
-                const { data } = await axios.get(url="http://web-backend:15000/legends/");
-                dispatch(fetchCollectionSuccess(data));
-            } catch (error) {
-                dispatch(fetchCollectionFailure(error.message));
-            }
-        }
+        axios.get(api_url)
+        .then(response => dispatch(fetchCollectionSuccess(response.data)))
+        .catch(error => dispatch(fetchCollectionFailure(error.message)));
     };
 };

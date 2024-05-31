@@ -18,12 +18,15 @@ export const fetchCollectionFailure = errorMessage => ({
 
 export const fetchCollectionStartAsync = () => {
     return dispatch => {
+        console.log("Fetching a list of characters...");
 
         async () => {
             try {
                 dispatch(fetchCollectionStart());
 
-                const { data } = await axios.get(url="http://web-backend:15000/characters/");
+                let api_url = process.env.REACT_APP_API_URL + "/characters/";
+
+                const { data } = await axios.get(url=api_url);
                 dispatch(fetchCollectionSuccess(data));
             } catch (error) {
                 dispatch(fetchCollectionFailure(error.message));

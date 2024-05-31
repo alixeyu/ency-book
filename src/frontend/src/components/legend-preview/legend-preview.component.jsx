@@ -4,12 +4,12 @@ import CharacterCard from "../character-card/character-card.component";
 
 import "./legend-preview.styles.scss";
 
-const LegendPreview = ({ title, timeline, description }) => (
+const LegendPreview = ({ name, period, description }) => (
     <div className="legend">
         <div className="title">
-            <h2>{ title }</h2>
+            <h2>{ name }</h2>
             <div className="line">
-                <span className="timeline">{ timeline }</span>
+                <span className="timeline">{ period }</span>
             </div>
         </div>
 

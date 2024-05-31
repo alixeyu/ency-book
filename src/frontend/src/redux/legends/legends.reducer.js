@@ -7,6 +7,7 @@ const INITIAL_STATE = {
 };
 
 const legendsReducer = ( state = INITIAL_STATE, action ) => {
+    console.log(action);
     switch (action.type) {
         case LegendsActionTypes.FETCH_COLLECTION_START:
             return {
@@ -26,7 +27,7 @@ const legendsReducer = ( state = INITIAL_STATE, action ) => {
                 errorMessage: action.payload,
             }
         default:
-            return state
+            return state;
     }
 };
 
