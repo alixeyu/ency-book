@@ -1,18 +1,18 @@
 import axios from "axios";
 
-import CharactersActionTypes from "./characters.types";
+import LegendsActionTypes from "./legends.types";
 
 export const fetchCollectionStart = () => ({
-    type: CharactersActionTypes.FETCH_COLLECTION_START,
+    type: LegendsActionTypes.FETCH_COLLECTION_START,
 });
 
 export const fetchCollectionSuccess = collectionMap => ({
-    type: CharactersActionTypes.FETCH_COLLECTION_SUCCESS,
+    type: LegendsActionTypes.FETCH_COLLECTION_SUCCESS,
     payload: collectionMap,
 });
 
 export const fetchCollectionFailure = errorMessage => ({
-    type: CharactersActionTypes.FETCH_COLLECTION_FAILURE,
+    type: LegendsActionTypes.FETCH_COLLECTION_FAILURE,
     payload: errorMessage,
 });
 
@@ -23,7 +23,7 @@ export const fetchCollectionStartAsync = () => {
             try {
                 dispatch(fetchCollectionStart());
 
-                const { data } = await axios.get(url="http://web-backend:15000/characters/");
+                const { data } = await axios.get(url="http://web-backend:15000/legends/");
                 dispatch(fetchCollectionSuccess(data));
             } catch (error) {
                 dispatch(fetchCollectionFailure(error.message));
