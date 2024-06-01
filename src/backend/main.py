@@ -10,7 +10,7 @@ app.include_router(auth_router)
 app.include_router(legends_router)
 app.include_router(treasure_router)
 
-origins = ["http://localhost:3000"]
+origins = ["*"]
 
 app.add_middleware(
     CORSMiddleware,
